@@ -9,15 +9,15 @@ public class MaoDragger : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     void Start()
     {
         _cam = Camera.main;
-        Debug.Log("[MaoDragger] Standard Event System mode active on " + gameObject.name);
+        Debug.Log("[MaoDragger] 드레거 시작 " + gameObject.name);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        // 1. Get world position of the click
+       
         Vector3 worldPos = _cam.ScreenToWorldPoint(new Vector3(eventData.position.x, eventData.position.y, Mathf.Abs(transform.position.z - _cam.transform.position.z)));
         
-        // 2. Calculate offset
+        
         _offset = transform.position - worldPos;
         
         //Debug.Log("[MaoDragger] >>> Pointer DOWN - Drag Start <<<");
@@ -25,7 +25,7 @@ public class MaoDragger : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
 
     public void OnDrag(PointerEventData eventData)
     {
-        // 3. Move object to pointer position + offset
+        
         Vector3 worldPos = _cam.ScreenToWorldPoint(new Vector3(eventData.position.x, eventData.position.y, Mathf.Abs(transform.position.z - _cam.transform.position.z)));
         transform.position = worldPos + _offset;
     }

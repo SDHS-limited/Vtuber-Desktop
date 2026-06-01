@@ -43,7 +43,7 @@ public class WindowsSTT : MonoBehaviour
             // 기본 마이크 사용
             _recognizer.SetInputToDefaultAudioDevice();
 
-            Debug.Log($"✅ Windows STT 초기화 완료 ({language})");
+            Debug.Log($"Windows STT 초기화 완료 ({language})");
         }
         catch (Exception e)
         {
@@ -67,7 +67,7 @@ public class WindowsSTT : MonoBehaviour
         if (_recognizer == null || IsListening) return;
         IsListening = true;
         _recognizer.RecognizeAsync(RecognizeMode.Single);
-        Debug.Log("🎤 Windows STT 듣는 중...");
+        Debug.Log(" Windows STT 듣는 중...");
     }
 
     public void StopListening()
@@ -87,7 +87,7 @@ public class WindowsSTT : MonoBehaviour
         }
 
         string text = e.Result.Text;
-        Debug.Log($"📝 인식됨 ({e.Result.Confidence:F2}): {text}");
+        Debug.Log($" 인식됨 ({e.Result.Confidence:F2}): {text}");
 
         // 메인 스레드로 전달
         _pendingResult = text;
@@ -97,7 +97,7 @@ public class WindowsSTT : MonoBehaviour
 
     void OnSpeechRejected(object sender, SpeechRecognitionRejectedEventArgs e)
     {
-        Debug.Log("❌ 음성 인식 실패 (다시 말씀해 주세요)");
+        Debug.Log(" 음성 인식 실패 (다시 말씀해 주세요)");
         IsListening = false;
 
         // 인식 실패도 컨트롤러에 알려줘야 다시 대기 상태로 전환

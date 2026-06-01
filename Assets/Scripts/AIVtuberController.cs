@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
 
@@ -10,8 +11,8 @@ public class AIVtuberController : MonoBehaviour
     public VoicevoxTTS tts;
 
     [Header("UI (선택)")]
-    public TMP_Text subtitleText;
-    public TMP_Text statusText;
+    public Text subtitleText;
+    public Text statusText;
 
     public enum State { Idle, Listening, Thinking, Speaking }
     public State CurrentState { get; private set; } = State.Idle;
