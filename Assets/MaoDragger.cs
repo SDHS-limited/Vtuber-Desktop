@@ -20,7 +20,7 @@ public class MaoDragger : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
         // 2. Calculate offset
         _offset = transform.position - worldPos;
         
-        Debug.Log("[MaoDragger] >>> Pointer DOWN - Drag Start <<<");
+        //Debug.Log("[MaoDragger] >>> Pointer DOWN - Drag Start <<<");
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -32,6 +32,6 @@ public class MaoDragger : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("[MaoDragger] <<< Pointer UP - Drag End >>>");
+        //Debug.Log("[MaoDragger] <<< Pointer UP - Drag End >>>");
     }
 }
