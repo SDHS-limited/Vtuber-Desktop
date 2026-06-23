@@ -1,3 +1,4 @@
+
 # Vtuber Desktop
 
 ## 프로젝트 소개
@@ -84,12 +85,11 @@ Assets
 
 ### 메인 화면
 
-(이미지 추가)
 
-### 캐릭터 상호작용
+<img width="1474" height="877" alt="스크린샷 2026-06-23 094528" src="https://github.com/user-attachments/assets/b7fe414c-d823-4d17-ae3b-e5dd74346495" />
 
-(이미지 추가)
 
 ### 설정 화면
 
-(이미지 추가)
+<img width="445" height="907" alt="스크린샷 2026-06-23 094603" src="https://github.com/user-attachments/assets/3e41dd16-24c7-44c1-89d9-aaffed847e5c" />
+
